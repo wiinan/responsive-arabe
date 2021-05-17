@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arabe website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Deserto-Arabe</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Tabela</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="stars2.png" id='stars2'>
+        <img src="moon.png" id="moon">
+        <h2 id="text">github.com/wiinan</h2>
+        <img src="rock.png" id="rock">
+        <img src="masjid.png" id="masjid">
+        <img src="bottom.png" id="bottom">
+        <img src="lamp.png" id="lamp">
+    </section>
+    <div class="sec">
+        <h2>Happy eid mubarak to you and family.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper commodo nisl sit amet vehicula. Donec vitae malesuada ante, in viverra eros. Donec hendrerit, dolor id ultricies fermentum, ligula quam sollicitudin elit, in semper risus tortor in leo. Phasellus quis aliquet mi. Cras justo quam, pulvinar in lacus id, dapibus tempus dolor. Integer nec mauris luctus, eleifend ante eu, tempor odio. Etiam sed risus sodales, dictum nisl at, cursus lorem. Integer eget turpis et augue tincidunt elementum eget nec lorem.<br><br>
+
+            Pellentesque eu tincidunt nisi, malesuada malesuada purus. Ut id ornare massa, at laoreet justo. Proin mollis ultrices pretium. In hac habitasse platea dictumst. Phasellus iaculis facilisis pharetra. Curabitur nec velit lacinia magna viverra tempus vel non odio. Suspendisse id semper felis. Quisque tincidunt non lectus vel mollis. Aliquam quis urna ut leo fermentum gravida non non nunc. Ut venenatis eros mi, sit amet congue lorem hendrerit a. In elementum nulla aliquet fringilla cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sed est iaculis, ultrices leo a, ullamcorper lorem. Vivamus imperdiet aliquet lorem, ut tempus felis efficitur quis. Vivamus interdum felis sem.<br><br>
+            
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin ac maximus urna. Vivamus eget consequat nisl, id tristique sem. Duis turpis lacus, tincidunt id quam eu, euismod commodo sapien. Curabitur facilisis nulla in urna mollis tempus. Proin vitae fermentum purus. Quisque molestie magna vitae nisi faucibus tempus. Nam odio lorem, faucibus gravida dui sit amet, sagittis venenatis leo. Fusce interdum sapien augue, a rhoncus lacus imperdiet a. Vivamus vel interdum metus. Aenean gravida nunc sed lectus volutpat gravida. In a auctor est, vitae iaculis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque elementum tellus ac convallis feugiat. Pellentesque nec varius lectus, nec maximus ligula.<br><br>
+            
+            Nullam et lacus nisi. Proin ut mauris ac ligula ullamcorper fermentum a vitae augue. Vestibulum purus felis, malesuada in rhoncus ullamcorper, viverra id turpis. Nulla volutpat ligula ac tincidunt consequat. Quisque a lacus turpis. Pellentesque ultricies, elit non scelerisque porttitor, dui dolor ornare tortor, eget convallis dui dolor bibendum mauris. Morbi rhoncus lacus eros, et tempor lectus euismod vulputate. Suspendisse ornare est risus, vitae elementum nulla tempor ut. Nullam molestie risus sed risus sollicitudin, at dictum lectus pharetra.<br><br>
+            
+            Nam ultrices, ante ac viverra tristique, erat dui finibus enim, pulvinar dignissim velit ante vitae tellus. Phasellus quis ligula libero. Quisque vehicula lectus vel eros porta ultrices. Proin viverra convallis erat, ac accumsan metus pellentesque congue. Pellentesque dapibus erat a turpis congue scelerisque. Fusce dapibus ante at arcu tempor feugiat. Aliquam lacinia blandit hendrerit. Pellentesque feugiat posuere tellus non pharetra. Cras purus risus, ullamcorper quis sapien in, placerat porta dui. Morbi dignissim est sed felis porta facilisis. Praesent laoreet volutpat dapibus. Praesent consectetur, mi eu dictum placerat, tellus lorem tempus mauris, eu posuere est tortor eu tellus. Proin at tellus laoreet, rutrum orci ut, hendrerit ipsum. Nulla rhoncus sit amet tortor non vestibulum.<br></p>
+    </div>
+    <script>
+        let stars = document.querySelector('#stars');
+        let stars2 = document.querySelector('#stars2');
+        let moon = document.querySelector('#moon');
+        let rock = document.querySelector('#rock');
+        let masjid = document.querySelector('#masjid');
+        let text = document.querySelector('#text');
+        let header = document.querySelector('#header');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.bottom = value * 0.05 + '%';
+            stars2.style.bottom = value * 0.025 + '%';
+            moon.style.bottom = value * -0.5 + "px";
+            rock.style.bottom = value * -0.75 + "px";
+            masjid.style.bottom = value * -0.15 + 'px';
+            text.style.right = -80 + value * 0.5 + '%';
+            text.style.top = 30 + value * 0.1 + '%';
+            header.style.top = value * 0.5 + 'px';
+        })
+        let toggleMenu = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        toggleMenu.onclick = function(){
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
